@@ -1,17 +1,24 @@
 function getURL(){
   var website = document.getElementById("website").value;
-  getHttp =   website.substring(0, 8);
-  getWWW = website.indexOf('www');
-  if ( getHttp != "https://"){
-    if (getWWW ==-1){
+  website = fixURL(website);
+  const request = new Request(website);
+  const url = request.url;
+  console.log(url);
+  window.open("https://67e7a4c5-dc48-4151-a0a1-bd6fbd859afe.id.repl.co/?URL="+url);
+}
+
+function fixURL(website){
+  getHttp = website.substring(0, 8);
+  getWWW = website.includes('www');
+  const re = /[.]/g;
+  dotCount = website.match(re).length;
+  if (getHttp != "https://"){
+    if (!getWWW && dotCount<2){
       website = 'https://www.' + website;
     }
     else{
       website = 'https://' + website;
     }
   }
-  const request = new Request(website);
-  const url = request.url;
-  console.log(url);
-  window.open("https://6e84d2e0-65a0-4808-9874-5f9e48bf14a9.id.repl.co/?URL="+url);
+  return website;
 }
