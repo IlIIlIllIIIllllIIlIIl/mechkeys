@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width">
     <title>cliffbars</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   </head>
   <body>
     <script src="script.js"></script>
-    <label for="website">Website URL: </label>
-    <input type="url" id="website" name="website">
-    <button onclick="getURL()">Submit</button>
+    <label for="website" 
+    class="label is-info is-medium"
+    >Website URL: </label>
+    <input type="url" id="website" name="website"
+    class="input is-outlined is-small">
+    <button onclick="getURL()" 
+    class="button is-link is-small is-outlined"
+    >Submit</button>
   </body>
 </html>
