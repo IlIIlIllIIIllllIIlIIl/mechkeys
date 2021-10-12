@@ -9,13 +9,16 @@
   </head>
   <body>
     <script src="script.js"></script>
-    <label for="website" 
-    class="label is-info is-small"
-    >Website URL: </label>
-    <input type="url" id="website" name="website"
-    class="input is-outlined is-small">
-    <button onclick="getURL()" 
-    class="button is-link is-small is-outlined"
-    >Submit</button>
+    <form class="box">
+      <div class="field">
+        <label class="label">Website URL:</label>
+        <div class="control">
+          <input class="input" type="url" id="website" placeholder="https://www.google.com/">
+        </div>
+      </div>
+      <button onclick="getURL()" 
+      class="button is-link is-light"
+      >Submit</button>
+    </form>
   </body>
 </html>

@@ -1,5 +1,8 @@
 function getURL(){
   var website = document.getElementById("website").value;
+  if(website.length==0){
+    website="https://www.google.com/";
+  }
   website = fixURL(website);
   const request = new Request(website);
   const url = request.url;
