@@ -7,8 +7,8 @@ function getURL(){
   const request = new Request(website);
   const url = request.url;
   console.log(url);
-  document.getElementById("frame").url = "https://67e7a4c5-dc48-4151-a0a1-bd6fbd859afe.id.repl.co/?URL=" + url;
-  //window.open("https://67e7a4c5-dc48-4151-a0a1-bd6fbd859afe.id.repl.co/?URL="+url);
+  //document.getElementById("frame").url = "https://67e7a4c5-dc48-4151-a0a1-bd6fbd859afe.id.repl.co/?URL=" + url;
+  window.open("https://67e7a4c5-dc48-4151-a0a1-bd6fbd859afe.id.repl.co/?URL="+url);
 }
 
 function fixURL(website){
